@@ -1,14 +1,14 @@
 
 import {createServer} from './server'
 import config from './config'
-// import connectDb from './database/db'
+import connectDb from './database/db'
 import logger from './logger'
 
 
 const startServer = async () => {
   try {
     // Initialize database connection
-    // await connectDb();
+    await connectDb();
 
     // Create Express server
     const server = createServer();
@@ -17,7 +17,7 @@ const startServer = async () => {
     const httpServer = server.listen(config.port, () => {
       logger.info(`🚀 Server running on port ${config.port}`);
       logger.info(`Environment: ${config.env}`);
-    //   logger.info(`Database: ${config.dbUrl.replace(/\/\/.*@/, '//***:***@')}`);
+      logger.info(`Database: ${config.dbUrl.replace(/\/\/.*@/, '//***:***@')}`);
     });
 
 
@@ -32,6 +32,7 @@ const startServer = async () => {
       logger.error(`Uncaught Exception: ${err.message}`);
       process.exit(1);
     });
+    
 
   } catch (error) {
     logger.error('Failed to start server:', error);
