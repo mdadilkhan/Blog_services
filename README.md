@@ -15,18 +15,18 @@ npm install
 
 
 # ⚙️ Setup environment variables (edit .env file)
-PORT=3000
-NODE_ENV=development
-APP_DEBUG=false
-LOG_LEVEL=debug
-SECRET_KEY=XXXXXXXX
-ISSUER="xxxxxx"
-DATABASE_URL=
-AWS_ACCESS_KEY=
-AWS_SECRET_KEY=
-AWS_REGION=
-AWS_BUCKET=
-AWS_CLOUD_FRONT=
+# PORT=3000
+# NODE_ENV=development
+# APP_DEBUG=false
+# LOG_LEVEL=debug
+# SECRET_KEY=XXXXXXXX
+# ISSUER="xxxxxx"
+# DATABASE_URL=
+# AWS_ACCESS_KEY=
+# AWS_SECRET_KEY=
+# AWS_REGION=
+# AWS_BUCKET=
+# AWS_CLOUD_FRONT=
 
 # 🧪 Run test cases (if any)
 npm run test
